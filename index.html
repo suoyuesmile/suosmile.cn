@@ -52,7 +52,78 @@
 	li:hover a{
 		text-decoration:underline;
 	}
-
+	.firstfloor{
+		width: 100%;
+		background: #f5f5f5;
+		height: 600px;	
+		border-bottom: 1px solid #fff;
+	}
+	.firstfloor .lunbo{
+		width: 100%;
+		height: 450px;
+		background:  #f5f5f5;
+		border: 1px solid rgba(204, 204, 204, 0.7);
+		box-shadow: 2px 2px 15px rgba(204, 204, 204, 0.35);
+	}
+	.firstfloor .guide{
+		margin: 0 auto;
+		width: 1120px;
+		height: 150px;
+	}
+	.guide ul{
+		
+	}
+	.guide ul li{
+		margin-left: 0px;
+		list-style: none;
+		width: 140px;
+		float: left;
+		opacity: 0.6;
+		filter:alpha(opacity=60);
+	}
+	.guide ul li:hover{
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	a{
+		position: relative;
+	}
+	.guide ul li a img{
+		
+		margin-left: 55px;
+		width: 30px;
+		height: 30px;
+	}
+	a .img_w{
+		font-size: 14px;
+		font-family: "华文细黑";
+		margin-left: 40px;
+		position: absolute;
+		bottom: 20px;
+		width: 60px;
+		height: 20px;
+		text-align: center;
+	}
+	.secondfloor{
+		width: 100%;
+		height: 800px;
+		background: #aeaeae;	
+	}
+	.thirdfloor{
+		width: 100%;
+		height: 800px;
+		background: #f5f5f5;
+	}
+	.forthfloor{
+		width: 100%;
+		height: 800px;
+		background: #aeaeae;	
+	}
+	.footer{
+		width: 100%;
+		height: 400px;
+		background: #f5f5f5;
+	}
 	</style>
 	<meta charset="utf-8">
 	<title>首页</title>
@@ -72,5 +143,27 @@
 		</ul>
 	</div>
 </div>
+<div class="main">
+	<div class="firstfloor">
+		<div class="lunbo"></div>
+		<div class="guide">
+			<ul>
+				<li><a href="http://www.icourse163.org" target="_blank"><img src="images/study.png" alt=""><div class="img_w">学习一下</div></a></li>
+				<li><a href="https://github.com" target="_blank"><img src="images/project.png" alt=""><div class="img_w">看看项目</div></a></li>
+				<li><a href="https://www.wtu.edu.cn/html/wwwindex.html" target="_blank"><img src="images/academy.png" alt=""><div class="img_w" target="_blank">逛逛校园</div></a></li>
+				<li><a href="http://music.163.com/" target="_blank"><img src="images/music.png" alt=""><div class="img_w">听听音乐</div></a></li>
+				<li><a href="https://dianying.nuomi.com/" target="_blank"><img src="images/movie.png" alt=""><div class="img_w">看看电影</div></a></li>
+				<li><a href="http://bangumi.bilibili.com/22/" target="_blank"><img src="images/cartoon.png" alt=""><div class="img_w">追追动漫</div></a></li>
+				<li><a href="https://lvyou.baidu.com/" target="_blank"><img src="images/traver.png" alt=""><div class="img_w">观观河山</div></a></li>
+				<li><a href="#"><img src="images/dai.png" alt=""><div class="img_w">还有啥的</div></a></li>
+			</lu>
+		</div>
+	</div>
+	<div class="secondfloor"></div>
+	<div class="thirdfloor"></div>
+	<div class="forthfloor"></div>
+	<div class="fifthfloor"></div>
+</div>
+<div class="footer"></div>
 </body>
 </html>
