@@ -1,0 +1,72 @@
+.main{}
+.main .firstfloor{
+	position: relative;
+	overflow: hidden;
+	height: 450px;
+	width: 100%;
+	background: #aeaeae;
+}
+.firstfloor img{
+	height: 300px;
+	width: 100%;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+.firstfloor .guide{
+	margin: 0 auto;
+	width: 1120px;
+	height: 150px;
+}
+.guide ul{
+	
+}
+.guide ul li{
+	margin-left: 0px;
+	list-style: none;
+	width: 140px;
+	float: left;
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+}
+.guide ul li:hover{
+	opacity: 1;
+	filter:alpha(opacity=100);
+}
+a{
+	position: relative;
+}
+.guide ul li a img{
+	margin-left: 55px;
+	width: 30px;
+	height: 30px;
+}
+a .img_w{
+	font-size: 14px;
+	font-family: "华文细黑";
+	margin-left: 40px;
+	position: absolute;
+	bottom: 20px;
+	width: 60px;
+	height: 20px;
+	text-align: center;
+}
+
+.aword{
+	position: absolute;
+	line-height: 300px;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	color: #fff;
+	font-family: "华文细黑";
+	font-size: 30px;
+}
+.secondfloor{
+	width: 100%;
+	height: 800px;
+	background: #aeaeae;
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
