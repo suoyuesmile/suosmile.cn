@@ -1,0 +1,19 @@
+.main{
+	width: 100%;
+}
+.main .fisrtfloor{
+	width: 100%;
+	height: 900px;
+}
+.firstfloor img{
+	width: 100%;
+	height: 700;
+}
+.firstfloor .loveMusic{
+	width: 100%;
+	height: 200px;
+}
+.secondfloor,.thirdfloor,.forthfloor,.fifthfloor a img{
+	height: 700px;
+	width: 100%;
+}
