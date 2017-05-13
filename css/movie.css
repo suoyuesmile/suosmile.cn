@@ -1,0 +1,33 @@
+.main .fisrtfloor {
+	width: 100%;
+	height: 700px;
+	background: #aeaeae;
+}
+
+.firstfloor .top_img {
+	position: relative;
+	height: 700px;
+	width: 100%;
+}
+
+.top_img a {
+	line-height: 0px;
+}
+
+.firstfloor a img {
+	width: 100%;
+	height: 700px;
+}
+.secondfloor,.thirdfloor,.forthfloor,.fifthfloor {
+	width: 100%;
+	overflow: hidden;
+}
+
+.secondfloor,.thirdfloor,.forthfloor,.fifthfloor a {
+	line-height: 0px;
+}
+
+.secondfloor,.thirdfloor,.forthfloor,.fifthfloor a img {
+	width: 100%;
+	height: 100%;
+}
