@@ -136,39 +136,128 @@ a .img_w {
 }
 
 .secondfloor {
+	position: relative;
 	width: 100%;
 	height: 800px;
 	background: #aeaeae;
-	filter: alpha(opacity=30);
-	opacity: 0.3;
 }
-
-.thirdfloor {
+.secondfloor a{
+	line-height: 0px;
+}
+.secondfloor a img{
 	width: 100%;
 	height: 800px;
+}
+.thirdfloor {
+	width: 100%;
+	height: 700px;
 	background: #f5f5f5;
 }
-
+.thirdfloor a img{
+	width: 100%;
+	height: 700px;
+}
 .forthfloor {
 	width: 100%;
 	height: 800px;
-	background: #aeaeae;
-	filter: alpha(opacity=30);
-	opacity: 0.3;
+	background: url("../images/mess_bg.jpg");
+}
+.forthfloor .message_copy{
+	width: 900px;
+	height: 800px;
+	margin: 0 auto;
+}
+.top_blank{
+	width: 900px;
+	height: 50px;
+}
+.massage_content {
+	height: 550px;
+	width: 900px;
+	margin-top:20px;
+	padding: 20px 30px 20px 30px;
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #D3D3D3;
+	text-shadow: 1px 1px 1px #444;
+	border: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.massage_content h1 {
+	padding: 0px 0px 10px 40px;
+	display: block;
+	border-bottom: 1px solid #444;
+	margin: -10px -30px 30px -30px;
+}
+.massage_content h1>span {
+	display: block;
+	font-size: 11px;
+}
+.massage_content label {
+	display: block;
+	margin: 0px 0px 5px;
+}
+.massage_content label>span {
+	float: left;
+	width: 20%;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+.massage_content input[type="text"], .massage_content input[type="email"], .massage_content textarea, .massage_content select {
+	border: none;
+	color: #525252;
+	height: 25px;
+	line-height:15px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	outline: 0 none;
+	padding: 5px 0px 5px 5px;
+	width: 30%;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	background: #DFDFDF;
+}
+.massage_content select {
+	background: #DFDFDF url('down-arrow.png') no-repeat right;
+	background: #DFDFDF url('down-arrow.png') no-repeat right;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	width: 30%;
+	height: 35px;
+	color: #525252;
+	line-height: 25px;
+}
+.massage_content textarea{
+	height:200px;
+	padding: 5px 0px 0px 5px;
+	width: 60%;
+}
+.massage_content .button {
+	background: #fff;
+	border: none;
+	padding: 10px 25px 10px 25px;
+	color: #585858;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	text-shadow: 1px 1px 1px #FFE477;
+	font-weight: bold;
+	box-shadow: 1px 1px 1px #3D3D3D;
+	-webkit-box-shadow:1px 1px 1px #3D3D3D;
+	-moz-box-shadow:1px 1px 1px #3D3D3D;
+}
+.massage_content .button:hover {
+	color: #333;
+	background-color: #EBEBEB;
 }
 
-.fifthfloor {
-	width: 100%;
-	height: 800px;
-	background: #f5f5f5;
-	filter: alpha(opacity=30);
-	opacity: 0.3;
-}
 
-.sixthfloor {
-	width: 100%;
-	height: 800px;
-	background: #aeaeae;
-	filter: alpha(opacity=30);
-	opacity: 0.3;
-}

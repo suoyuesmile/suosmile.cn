@@ -19,6 +19,7 @@
 	margin-bottom: 60px;
 }
 .item1,.item2{
+	border-radius: 20px;
 	background: #aeaeae;
 	height: 400px;
 	width: 500px;
