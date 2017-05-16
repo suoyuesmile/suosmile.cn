@@ -62,26 +62,57 @@ a .img_w{
 	text-align: center;
 	color: #fff;
 	font-family: "华文细黑";
-	font-size: 30px;
+	font-size: 20px;
 }
-.secondfloor {
+.secondfloor,.thirdfloor,.forthfloor {
+	color: #555;
+	font-family: "华文细黑";
 	width: 100%;
 	height: 800px;
-	background: #aeaeae;
-	filter: alpha(opacity=30);
-	opacity: 0.3;
 }
-
-.thirdfloor {
-	width: 100%;
-	height: 800px;
+.secondfloor,.forthfloor{
+	background: #dedede;
+}
+.secondfloor .s_copy,.thirdfloor .s_copy,.forthfloor .s_copy{
+	width: 800px;
+	margin:0 auto;
+}
+.s_copy .dv_line{
+	height: 50px;
+}
+.s_copy h3{
+	text-align: center;
+}
+.s_copy p{
+	margin-top: 20px;
+	width: 800px;
+	font-size: 14px;
+	text-align: center;
+}
+.s_copy ul{
+	margin-left: 20px;
+	margin-top: 40px;
+}
+.s_copy ul li{
 	background: #f5f5f5;
+	list-style: none;
+	float: left;
+	height: 250px;
+	width: 250px;
 }
 
-.forthfloor {
-	width: 100%;
-	height: 800px;
-	background: #aeaeae;
-	filter: alpha(opacity=30);
-	opacity: 0.3;
+.s_copy ul li a img{
+	display: block;
+	height: 200px;
+	width: 250px;
+	opacity: 0.7;
+	filter:alpha(opacity=70);
+}
+.s_copy ul li .wt{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.thirdfloor {
+	background: #f5f5f5;
 }
