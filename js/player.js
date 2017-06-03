@@ -1,16 +1,3 @@
-
-/*
-DONE:
-- play/pause;
-- volume;
-- progress bar.
-
-TODO:
-- backward/forward;
-- repeat/shuffle;
-- lyrics;
-- playlist.
-*/
 var audio = document.getElementById('audio');
 var progress = document.getElementById('progress');
 var playpause = document.getElementById("play");

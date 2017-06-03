@@ -6,12 +6,54 @@
 	width: 100%;
 	background: #aeaeae;
 }
-.firstfloor img{
+.firstfloor .tag_content{
+	/*position: absolute;*/
+	text-align: center;
 	height: 300px;
 	width: 100%;
-	opacity: 0.7;
-	filter: alpha(opacity=70);
+	background: url('../images/tech.png');
 }
+.tag_content span {
+	float: left; font-size:16px; line-height:2em;
+}
+.tag_content span.bold {
+	font-weight:bold;
+}
+.tag_content span:nth-child(1) {
+	width: 35%;
+	text-align: center;
+}
+.tag_content span:nth-child(2) {
+	width: 30%;
+	text-align: left;
+}
+.tag_content span:nth-child(3) {
+	width: 35%;
+	text-align: left;
+}
+.tag_content span:nth-child(4) {
+	width: 35%;
+	text-align: right;
+}
+.tag_content span:nth-child(5) {
+	width: 25%;
+	text-align: right;
+}
+.tag_content span:nth-child(6) {
+	width: 25%;
+	text-align: right;
+}
+.tag_content span:nth-child(7) {
+	width: 50%;
+	text-align: center;
+}
+.tag_content span:nth-child(8) {
+	width: 30%;
+	text-align: center;
+}
+.tag_content span:nth-child(9) {
+	
+	}
 .firstfloor .guide{
 	margin: 0 auto;
 	width: 1120px;
@@ -52,7 +94,7 @@ a .img_w{
 	text-align: center;
 }
 
-.aword{
+/*.aword{
 	position: absolute;
 	line-height: 300px;
 	left: 0px;
@@ -63,7 +105,7 @@ a .img_w{
 	color: #fff;
 	font-family: "华文细黑";
 	font-size: 20px;
-}
+}*/
 .secondfloor,.thirdfloor,.forthfloor {
 	color: #555;
 	font-family: "华文细黑";
@@ -94,7 +136,6 @@ a .img_w{
 	margin-top: 40px;
 }
 .s_copy ul li{
-	background: #f5f5f5;
 	list-style: none;
 	float: left;
 	height: 250px;

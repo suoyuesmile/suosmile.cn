@@ -54,9 +54,13 @@ li a {
 }
 
 li:hover a {
-	text-decoration: underline;
+	color: #26C5CB;
 }
-
+#active{
+	display: block;
+	height: 80px;
+	border-bottom: 2px solid #aeaeae;
+}
 .care {
 	color: #f00;
 }

@@ -97,5 +97,4 @@ window.onload = function () {
     container.onmouseover = stop;
     container.onmouseout = play;
     play();
-
 }
