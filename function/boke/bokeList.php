@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<!-- <link rel="stylesheet" type="text/css" href="../../css/pagination.css" media="screen"> -->
 	<script src="../../js/jquery.min.js"></script>
 	<script src="../../js/jquery.pagination.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../css/header.css">
@@ -30,22 +29,22 @@
 		<div class="wrapper">
 			<div class="m_tag">分类标签</div>
 			<ul>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=HTML">HTML</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=CSS">CSS</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=Javascript">Javascript</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=jQuery">jQuery</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=AJAX">AJAX</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=Bootstrap">Bootstrap</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=firebug">firebug</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=PHP">PHP</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=MySQL">MySQL</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=Smarty">Smarty</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=Thinkphp">Thinkphp</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=Yii">Yii</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=Laravel">Laravel</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=Git">Git</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=LAMP">LAMP</a></li>
-				<li><a href="http://localhost/suoyueBoke/function/boke/bokeList.php?c=Linux">Linux</a></li>
+				<li><a href="bokeList.php?c=HTML">HTML</a></li>
+				<li><a href="bokeList.php?c=CSS">CSS</a></li>
+				<li><a href="bokeList.php?c=Javascript">Javascript</a></li>
+				<li><a href="bokeList.php?c=jQuery">jQuery</a></li>
+				<li><a href="bokeList.php?c=AJAX">AJAX</a></li>
+				<li><a href="bokeList.php?c=Bootstrap">Bootstrap</a></li>
+				<li><a href="bokeList.php?c=firebug">firebug</a></li>
+				<li><a href="bokeList.php?c=PHP">PHP</a></li>
+				<li><a href="bokeList.php?c=MySQL">MySQL</a></li>
+				<li><a href="bokeList.php?c=Smarty">Smarty</a></li>
+				<li><a href="bokeList.php?c=Thinkphp">Thinkphp</a></li>
+				<li><a href="bokeList.php?c=Yii">Yii</a></li>
+				<li><a href="bokeList.php?c=Laravel">Laravel</a></li>
+				<li><a href="bokeList.php?c=Git">Git</a></li>
+				<li><a href="bokeList.php?c=LAMP">LAMP</a></li>
+				<li><a href="bokeList.php?c=Linux">Linux</a></li>
 			</ul>
 		</div>
 	</div>
@@ -62,11 +61,15 @@
 				<div class="m_list_title"><?php echo $cate; ?>笔记</div>
 				<div id="txt">
 					<?php
-						include_once('../Mysql.class.php');
-						$db = new Mysql();
-						$db->connect();
-						$res = mysql_query("SELECT id, title, `date`, `view`, rewrite FROM sy_boke WHERE category='$cate' LIMIT 12");
-						while( $rows = mysql_fetch_array($res) ) {
+						header("content-type:text/html;charset=utf-8");
+						$mysqli = @new mysqli('localhost', 'root', 'suoyue', 'sy_boke_db');
+						$mysqli->set_charset('utf8');
+						if($mysqli->connect_errno){
+							die('数据库连接失败：'.$mysqli->connect_error);
+						}
+						$sql = "SELECT id, title, `date`, `view`, rewrite FROM sy_boke WHERE category='$cate' LIMIT 12";
+						$res = $mysqli->query($sql);
+						while($rows = $res->fetch_assoc()){
 					?>
 					<div class="m_list">
 						<div class="date"><?php echo $rows["date"]; ?></div>
@@ -76,7 +79,10 @@
 						</div>
 						<div class="rewrite"><img src="../../images/rewrite.png" alt=""> <?php echo $rows["rewrite"]; ?></div>
 					</div>
-					<?php } ?>
+					<?php 
+						} 
+						$mysqli->close();
+					?>
 				</div>
 				<div class="m_page"></div>
 			</div>

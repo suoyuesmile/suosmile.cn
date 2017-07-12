@@ -4,6 +4,7 @@ class Page{
 	private $perPage;
 	private $nPage;
 	private $offset;
+	private $mysqli;
 
 	public function __construct($curPage, $cate){
 		$this->cate = $cate;
@@ -15,25 +16,34 @@ class Page{
 	}
 
 	public function getConn(){
-		include_once('Mysql.class.php');
-		$db = new Mysql();
-		$db->connect();
+		header("content-type:text/html;charset=utf-8");
+		$this->mysqli = @new mysqli('localhost', 'root', 'suoyue', 'sy_boke_db') ;
+		$this->mysqli->set_charset('utf8');
+		if($this->mysqli->connect_errno){
+			die('数据库连接失败：'.$this->mysqli->connect_error);
+		}
 	}
+	// public function getClose(){
+	// 	$this->mysqli->close();
+	// }
 	public function getPageCount(){
 		return $this->nPage;
 	}
 
 	public function getTotal(){
-		$resTotal = mysql_query("SELECT * FROM sy_boke WHERE category='$this->cate'");
-		return mysql_num_rows($resTotal); //总记录数
+		$sql = "SELECT id FROM sy_boke WHERE category='$this->cate'";
+		$resTotal = $this->mysqli->query($sql);
+		return $resTotal->num_rows; //总记录数
 	}
 
 	public function showPage(){
 		$data = array();
-		$res = mysql_query("SELECT sy_boke.`date`, title, sy_boke.`view`, rewrite FROM sy_boke WHERE category='$this->cate' LIMIT $this->offset, $this->perPage ");
-		while($rows = mysql_fetch_assoc($res)){
+		$sql = "SELECT sy_boke.`date`, title, sy_boke.`view`, rewrite FROM sy_boke WHERE category='$this->cate' LIMIT $this->offset, $this->perPage ";
+		$res = $this->mysqli->query($sql);
+		while($rows = $res->fetch_assoc()){
 			array_push($data, $rows);
 		}
+		$this->mysqli->close();
 		return $data;
 	}
 };
